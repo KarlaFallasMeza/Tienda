@@ -1,33 +1,131 @@
 <!DOCTYPE html>
-<!--
+<!-- Se actualiza la pagina index para que contenga nuevas etiquetas meta y demas etiquetas para la semántica del body
 -->
-<html>
+<html lang="es">
     <head>
         <title>Tienda en línea</title>
         <meta charset="UTF-8">
+        <meta name="description" content="Esta pagina contiene etiquetas del tipo html 5 y luego enlaces o definicion de estilos CSS">
+        <meta name="keywords" content="html5,CSS3,web,Fidélitas">
+        <link href="css/Estilos.css" rel="stylesheet" type="text/css"/>
 
     </head>
     <body>
-        <a href="ejemplo9.html">Back</a>
-        <a href="index.html">Home</a>
-        <a href="ejemplo2.html">Next</a><br>
-        
-        
-        <div>
-            <<h1 style="text-align: center">Home</h1>
-            <p>Bienvenidos a la página de la tienda en línea</p>
-        </div>
-        <p style="text-align: left"> Lorem ipsum dolor sit amet consectetur adipiscing elit tincidunt facilisis nunc ultrices, sodales ac himenaeos tempor potenti primis libero justo nec quis, velit molestie dictumst proin ullamcorper magna a facilisi leo habitant. Elementum nunc convallis euismod natoque blandit cubilia primis molestie a leo, ridiculus ultrices ac nostra at porta quisque in sodales. Aliquet class facilisi nibh eu feugiat, magnis pharetra taciti habitasse pretium, eleifend maecenas torquent diam.</p>
 
-        <p style="text-align: right">Odio vitae habitant a massa tortor condimentum aliquet, iaculis integer mollis curabitur nec euismod sociis ridiculus, curae ut ante lacus feugiat molestie. Mattis habitasse accumsan in feugiat commodo leo maecenas cum nec, felis parturient malesuada dapibus eget vulputate mauris suspendisse vivamus, nostra dictum egestas convallis rutrum risus odio urna. Nisl lectus sapien phasellus volutpat fames torquent pellentesque sociis, magnis id justo accumsan malesuada iaculis potenti, fusce nascetur elementum leo integer ad dui. Taciti eu donec montes nascetur enim felis, eget facilisi vulputate nunc eros, massa interdum porttitor sociis mi.</p>
+        <header id="encabezado"> 
 
-        <p style="text-align: center">Cras interdum nullam sociis nisl curabitur mauris habitant vestibulum, non mollis accumsan felis mus est nulla, faucibus maecenas sodales iaculis sociosqu dignissim varius. Maecenas dictum gravida ac per condimentum ultrices orci aliquet, consequat conubia rutrum cubilia cras enim tortor pharetra, pulvinar fames bibendum nullam a fringilla eleifend. Leo pellentesque augue taciti lectus torquent lacinia venenatis quis accumsan, himenaeos sollicitudin dictum suscipit vestibulum lacus porta nibh, risus curabitur sed bibendum mauris faucibus pharetra hac</p>
-        
+            <h1>TechShop</h1><!--Etiqueta para ofrecerle al browser info de qie es un encabezado -->
+
+        </header>
+
+        <nav id="menu"> <!--Esta etiqueta es la ilustrarle al Browser que es posiblemente un Menú--->
+            <a href="ejemplo9.html">Back</a>
+            <a href="index.html">Home</a>
+            <a href="ejemplo2.html">Next</a><br>
+
+        </nav>
+
+
+        <aside id="barralateral">  <!<!-- Etiqueta para indicar que es una barra lateral, puede ser a la izquierda o la derecha y pueden ser varias--->
+            <<h2>Productos más vendidos</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit penatibus malesuada iaculis, commodo leo mollis senectus molestie interdum aptent dignissim quis. Metus nulla commodo gravida dignissim taciti primis pellentesque parturient phasellus lacus purus rhoncus sociis, suspendisse eleifend vivamus felis tristique sem sed porta id integer pharetra. Tempus cubilia urna vitae tempor odio euismod facilisi molestie sed lectus phasellus ornare, praesent sagittis cursus tortor arcu accumsan vel dapibus eu torquent ut mus nulla, magna viverra imperdiet curae velit laoreet metus aliquam vestibulum iaculis cum.</p>
+        </aside>
+
+        <section id="contenido">
+            <h2> Articulos Principales</h2>
+
+            <article>
+                <header>Portatil XRT 5000</header>
+                <p> Esta inspirada en la pelicula <cite>Aliens el octavo pasajero</cite> Lorem ipsum dolor sit amet consectetur adipiscing elit tincidunt facilisis nunc ultrices, sodales ac himenaeos tempor potenti primis libero justo nec quis, velit molestie dictumst proin ullamcorper magna a facilisi leo habitant. Elementum nunc convallis euismod natoque blandit cubilia primis molestie a leo, ridiculus ultrices ac nostra at porta quisque in sodales. Aliquet class facilisi nibh eu feugiat, magnis pharetra taciti habitasse pretium, eleifend maecenas torquent diam.</p>
+                <footer>Agregar al carrito</footer>
+                <figure>
+                    <img src="images/images.jpg" alt="Desktop XRT"/>
+
+                </figure>
+            </article>
+
+            <article>
+                <header>Alienware ATD 9000</header>
+                <p>Odio vitae habitant a massa tortor condimentum aliquet, iaculis integer mollis curabitur nec euismod sociis ridiculus, curae ut ante lacus feugiat molestie. Mattis habitasse accumsan in feugiat commodo leo maecenas cum nec, felis parturient malesuada dapibus eget vulputate mauris suspendisse vivamus, nostra dictum egestas convallis rutrum risus odio urna. Nisl lectus sapien phasellus volutpat fames torquent pellentesque sociis, magnis id justo accumsan malesuada iaculis potenti, fusce nascetur elementum leo integer ad dui. Taciti eu donec montes nascetur enim felis, eget facilisi vulputate nunc eros, massa interdum porttitor sociis mi.</p>
+                <footer>Agregar al carrito</footer>
+                <figure>
+                    <img src="images/descarga.jpg" alt="AlienWare"/>
+                    <figcaption>Más Vendido</figcaption>
+
+                </figure>
+            </article>
+
+            <article>
+                <header>Impresora 3D Portatil</header>
+                <p>Cras interdum nullam sociis nisl curabitur mauris habitant vestibulum, non mollis accumsan felis mus est nulla, faucibus maecenas sodales iaculis sociosqu dignissim varius. Maecenas dictum gravida ac per condimentum ultrices orci aliquet, consequat conubia rutrum cubilia cras enim tortor pharetra, pulvinar fames bibendum nullam a fringilla eleifend. Leo pellentesque augue taciti lectus torquent lacinia venenatis quis accumsan, himenaeos sollicitudin dictum suscipit vestibulum lacus porta nibh, risus curabitur sed bibendum mauris faucibus pharetra hac</p> 
+                <footer>Agregar al carrito </footer>
+
+                <figure>
+                    <img src="images/impresora.jpg" alt="3d print"/>
+                    <figcaption>Más Economica</figcaption>
+                </figure>
+
+            </article>
+            
+            
+            
+             <article>
+            <header>Resumen de lineas generales</header>
+            <table border="0">
+                <thead>
+                    <tr id="encabezadotabla">
+                        <th>Codigo</th>
+                        <th>Detalle</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaresumen">
+                    <tr>
+                        <td>1</td>
+                        <td>Cras interdum nullam sociis nisl curabitur m</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>endum mauris faucibus pharetra hac</td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td>Cras interdum nullam sociis nisl curabitur m</td>
+                    </tr>
+
+                    <tr>
+                        <td>4</td>
+                        <td>himenaeos sollicitudin dictum suscipit vestibulum lacus porta nibh, risus curabitur sed bibendum mauris faucibus pharetra hac</td>
+                    </tr>
+
+                    <tr>
+                        <td>5</td>
+                        <td>Leo pellentesque augue taciti lectus torquent lacinia venenatis quis accumsan, himenaeos sollicitudin dictum suscipit vestibulum lacus porta nibh</td>
+                    </tr>
+
+                    <tr>
+                        <td>6</td>
+                        <td>tudin dictum suscipit vestibulum lacus porta nibh, risus curabitur sed bibendum mauris faucibus pharetra hac</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </article>
+
+        </section>|
+
+       
+
+        <footer id="piepagina">
+
+            Derechos reservados &COPY 2022;
+            <address style="display:inline"> Tel 8889-7744</address>
+        </footer>
         <br><!-- -->
         <br><!-- comment -->
         <br><!-- comment -->
-        
-        <p>Ultima Linea</p>
-        
+
+
+
     </body>
 </html>
