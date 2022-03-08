@@ -8,13 +8,18 @@
         </head>
         <body>
             <h1>Listado de clientes</h1>
-            <table border="1">
+            <a th:href="@{/nuevoCliente}">Nuevo Cliente</a>
+            <div th:if="${clientes != null and !clientes.empty}">
+
+                 <table border="1">
                 <thead>
                     <tr>
                         <th>Nombre</th>
                         <th>Apellidos</th>
                         <th>Correo</th>
                         <th>Telefono</th>
+                        <th>Eliminar</th>
+                        <th>Modificar</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -23,10 +28,18 @@
                         <td th:text="${cliente.apellidos}"></td>
                         <td th:text="${cliente.correo}"></td>
                         <td th:text="${cliente.telefono}"></td>
-                       
+                         <td><a th:href="@{/eliminarCliente/} + ${cliente.idcliente}">Eliminar</a></td>
+                        <td><a th:href="@{/modificarCliente/} + ${cliente.idcliente}">Modificar</a></td>
+
                     </tr>
                 </tbody>
             </table>
 
-        </body>
-    </html>
+        </div>
+
+            <div th:if="${clientes == null or clientes.empty}">
+                No tenemos lista de clientes que mostrar...
+            </div>         
+             
+             </body>
+</html>
