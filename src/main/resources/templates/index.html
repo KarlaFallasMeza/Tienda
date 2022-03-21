@@ -7,7 +7,8 @@
 
         </head>
         <body>
-            <h1>Listado de clientes</h1>
+            <header th:replace="layout/plantilla::header"/>
+            <h2>Listado de clientes</h2>
             <a th:href="@{/nuevoCliente}">Nuevo Cliente</a>
             <div th:if="${clientes != null and !clientes.empty}">
 
@@ -39,7 +40,9 @@
 
             <div th:if="${clientes == null or clientes.empty}">
                 No tenemos lista de clientes que mostrar...
-            </div>         
+            </div>  
+            
+            <footer th:replace="layout/plantilla::footer"/>
              
              </body>
 </html>

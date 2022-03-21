@@ -7,7 +7,7 @@
 
     </head>
     <body>
-        <h1>Datos de Cliente</h1>
+        <h2>Datos de Cliente</h2>
         <a th:href="@{/}">Regresar</a>
         <br/>
         <form th:action="@{/guardarCliente}"
@@ -30,5 +30,6 @@
            <br/>
            <input type="submit" name="guardar" value="Guardar"/>
         </form>
+        <footer th:replace="layout/plantilla::footer"/>
     </body>
 </html>
