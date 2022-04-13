@@ -20,14 +20,14 @@ public class ArticuloController {
     
     @GetMapping ("/articulo/listado")
     public String inicio(Model model){
-        var articulos=articuloService.getArticulos(false);
+        var articulos = articuloService.getArticulos(false);
         model.addAttribute("articulos",articulos);
         return "/articulo/listado";
     }
     
     @GetMapping("/articulo/nuevo")
     public String nuevoArticulo(Articulo articulo){
-        return "/articulo/modifica";
+        return "/articulo/modificar";
     }
     
     @PostMapping("/articulo/guardar")
@@ -36,15 +36,15 @@ public class ArticuloController {
         return "redirect:/articulo/listado";
     }
     
-    @GetMapping("/articulo/modificar/{idarticulo}")
+    @GetMapping("/articulo/modificar/{idArticulo}")
     public String modificarArticulo(Articulo articulo, Model model){
         articulo = articuloService.getArticulo(articulo);
         model.addAttribute("articulo",articulo);
-        return "/articulo/modifica";
+        return "/articulo/modificar";
         
     }
     
-    @GetMapping("/articulo/eliminar/{idarticulo}")
+    @GetMapping("/articulo/eliminar/{idArticulo}")
     public String eliminarArticulo(Articulo articulo){
         articuloService.delete(articulo);
         return "redirect:/articulo/listado";

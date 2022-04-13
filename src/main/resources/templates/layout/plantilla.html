@@ -7,39 +7,40 @@
         <meta charset="UTF-8"/>
 
     </head>
-    
+
     <body>
-        <header th:fragment="header">
-            class="Header"> 
+        <header th:fragment="header" class="Header">
             <nav class="nav"> 
                 <a th:href="@{/}" class="logo nav-link">TechShop</a>
                 <ul class = "nav-menu">
                     <li class ="nav-menu-item">
-                    <a class= "nav-menu-link nav-link"   th:href="@{/cliente/listado}">Clientes</a>
-                    
+                        <a class= "nav-menu-link nav-link"   th:href="@{/cliente/listado}">Clientes</a>
+
                     </li>
-                    
-                        <li class ="nav-menu-item">
-                    <a class= "nav-menu-link nav-link"   th:href="@{/categoria/listado}">Categorias</a>
-                    
-                        </li>
-                        
-                        
-                            <li class ="nav-menu-item">
-                    <a class= "nav-menu-link nav-link"   th:href="@{/articulo/listado}">Articulos</a>
-                    
+                </ul>
+
+                <ul class = "nav-menu">
+                    <li class ="nav-menu-item">
+                        <a class= "nav-menu-link nav-link"   th:href="@{/categoria/listado}">Categoria</a>
+
                     </li>
-                    
+                </ul>
+
+                <ul class = "nav-menu">
+                    <li class ="nav-menu-item">
+                        <a class= "nav-menu-link nav-link"   th:href="@{/articulo/listado}">Articulo</a>
+
+                    </li>
                 </ul>
 
             </nav>
-      
-            
+
+
         </header>
-        
+
         <footer th:fragment="footer" class="footer">
-             <p> &copy; Derechos Reservados 2022 </p>
-            
+            <p> &copy; Derechos Reservados 2022 </p>
+
         </footer>
     </body>
 </html>

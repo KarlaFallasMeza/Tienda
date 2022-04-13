@@ -7,9 +7,9 @@
             <link href="/css/menu.css" rel="stylesheet" type="text/css"/>
         </head>
         <body>
-            <header th:replace="layout/plantilla::header"/>
+            <header th:replace="layout/plantilla :: header" />
             <div class="contenido">           
-                <h2>Nuestros Articulos</h2>
+                <h2>Nuestros Productos</h2>
                 <div th:if="${articulos != null and !articulos.empty}">
 
                     <table border="1">
@@ -23,9 +23,10 @@
                             </tr>
                         </thead>
                         <tbody>
+                            
                             <tr th:each="articulo: ${articulos}">
-                                <td th:text="${cliente.descripcion}"></td>
-                                <td th:text="${cliente.precio}"></td>
+                                <td th:text="${articulo.descripcion}"></td>
+                                <td th:text="${articulo.precio}"></td>
                                 <td><a th:href="@{/carrito/agregar/} + ${articulo.idArticulo}">Agregar</a></td>
 
                             </tr>
@@ -35,11 +36,11 @@
 
         </div>
 
-        <div th:if="${articulos== null or clientes.empty}">
+        <div th:if="${articulos== null or articulos.empty}">
             No tenemos lista de articulos que mostrar...
         </div>  
 
-        <footer th:replace="layout/plantilla::footer"/>
+        <footer th:replace="layout/plantilla :: footer"/>
 
     </body>
 </html>

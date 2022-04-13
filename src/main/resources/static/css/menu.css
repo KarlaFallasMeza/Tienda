@@ -16,7 +16,7 @@ body{
     top:0;
     left:0;
     width: 100%;
-    
+
 }
 
 .nav{
@@ -31,7 +31,7 @@ body{
     font-weight: bold;
     padding: 0 40px;
     line-height: 80px;
-    
+
 }
 
 .nav-menu{
@@ -59,7 +59,6 @@ body{
 
 .footer{
     background-color: black;
-    text-align: center;
     color: white;
     height: 20px;
     position: fixed;
@@ -69,13 +68,13 @@ body{
 }
 
 .contenido{
-    
+
     background-color: wheat;
-    text-align: center;
     top: 80px;
     bottom: 20px;
+    left: 0;
     position: fixed;
     width: 100%;
     overflow: auto;
-    
+
 }

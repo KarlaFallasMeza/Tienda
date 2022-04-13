@@ -27,7 +27,7 @@ public class ClienteController {
     
     @GetMapping("/cliente/nuevo")
     public String nuevoCliente(Cliente cliente){
-        return "/cliente/modifica";
+        return "/cliente/modificar";
     }
     
     @PostMapping("/cliente/guardar")
@@ -36,7 +36,7 @@ public class ClienteController {
         return "redirect:/cliente/listado";
     }
     
-    @GetMapping("/cliente/modificar/{idcliente}")
+    @GetMapping("/cliente/modificar/{idCliente}")
     public String modificarCliente(Cliente cliente, Model model){
         cliente = clienteService.getCliente(cliente);
         model.addAttribute("cliente",cliente);
@@ -44,7 +44,7 @@ public class ClienteController {
         
     }
     
-    @GetMapping("/cliente/eliminar/{idcliente}")
+    @GetMapping("/cliente/eliminar/{idCliente}")
     public String eliminarCliente(Cliente cliente){
         clienteService.delete(cliente);
         return "redirect:/cliente/listado";

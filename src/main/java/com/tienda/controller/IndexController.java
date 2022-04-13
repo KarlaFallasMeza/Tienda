@@ -2,7 +2,6 @@
 package com.tienda.controller;
 
 
-
 import com.tienda.service.ArticuloService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +20,7 @@ public class IndexController {
     public String inicio(Model model){
         log.info("Estamos usando una arquitectura mcv");
 
-        var articulos=articuloService.getArticulos(true);
+        var articulos = articuloService.getArticulos(true);
         model.addAttribute("articulos",articulos);
         return "index";
     }

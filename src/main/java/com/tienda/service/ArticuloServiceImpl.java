@@ -16,33 +16,37 @@ public class ArticuloServiceImpl implements ArticuloService {
 
     @Autowired
 
-    private ArticuloDao clienteDao;
+    private ArticuloDao articuloDao;
 
-    @Transactional(readOnly=true)
+   
     @Override
     public List<Articulo> getArticulos(boolean activos) {
-      var lista= (List<Articulo>) clienteDao.findAll();
-      if (activos) { lista.removeIf( e -> !e.isActivo());}
+      var lista= (List<Articulo>) articuloDao.findAll();
+      
+      if (activos) { 
+        lista.removeIf(e -> !e.isActivo());
+      
+      }
       
       return lista;
     }
 
-    @Transactional
+
     @Override
-    public void save(Articulo cliente) {
-        clienteDao.save(cliente);
+    public void save(Articulo articulo) {
+        articuloDao.save(articulo);
     }
 
-  @Transactional
+ 
     @Override
-    public void delete(Articulo cliente) {
-        clienteDao.delete(cliente);
+    public void delete(Articulo articulo) {
+        articuloDao.delete(articulo);
     }
 
-     @Transactional(readOnly=true)
+    
     @Override
-    public Articulo getArticulo(Articulo cliente) {
-   return clienteDao.findById(cliente.getIdArticulo()).orElse(null);
+    public Articulo getArticulo(Articulo articulo) {
+   return articuloDao.findById(articulo.getIdArticulo()).orElse(null);
         
         
         

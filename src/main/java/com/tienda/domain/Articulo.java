@@ -15,10 +15,12 @@ import lombok.Data;
 public class Articulo implements Serializable {
 
     private static final long serialVersionUID = 1L;
+    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="id_articulo")
+   
     private long idArticulo;
+    
     private long idCategoria;
     private String descripcion;
     private String detalle;
@@ -30,7 +32,8 @@ public class Articulo implements Serializable {
     public Articulo() {
     }
 
-    public Articulo(long idCategoria, String descripcion, String detalle, double precio, int existencias, boolean activa) {
+    public Articulo(long idArticulo, long idCategoria, String descripcion, String detalle, double precio, int existencias, boolean activo) {
+        this.idArticulo = idArticulo;
         this.idCategoria = idCategoria;
         this.descripcion = descripcion;
         this.detalle = detalle;
