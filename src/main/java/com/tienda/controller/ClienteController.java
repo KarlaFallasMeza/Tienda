@@ -21,13 +21,20 @@ public class ClienteController {
     @GetMapping ("/cliente/listado")
     public String inicio(Model model){
         var clientes=clienteService.getClientes();
+            var limiteTotal=0;
+        for (var c: clientes) {
+            limiteTotal+=c.credito.limite;
+        }
+       model.addAttribute("limiteTotal",limiteTotal);
+        model.addAttribute("totalClientes",clientes.size());
+        
         model.addAttribute("clientes",clientes);
         return "/cliente/listado";
     }
     
     @GetMapping("/cliente/nuevo")
     public String nuevoCliente(Cliente cliente){
-        return "/cliente/modificar";
+        return "/cliente/modifica";
     }
     
     @PostMapping("/cliente/guardar")
@@ -36,15 +43,15 @@ public class ClienteController {
         return "redirect:/cliente/listado";
     }
     
-    @GetMapping("/cliente/modificar/{idCliente}")
+    @GetMapping("/cliente/modifica/{idCliente}")
     public String modificarCliente(Cliente cliente, Model model){
         cliente = clienteService.getCliente(cliente);
         model.addAttribute("cliente",cliente);
-        return "/cliente/modificar";
+        return "/cliente/modifica";
         
     }
     
-    @GetMapping("/cliente/eliminar/{idCliente}")
+    @GetMapping("/cliente/elimina/{idCliente}")
     public String eliminarCliente(Cliente cliente){
         clienteService.delete(cliente);
         return "redirect:/cliente/listado";
